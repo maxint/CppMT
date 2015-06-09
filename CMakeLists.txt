@@ -23,13 +23,14 @@ function(enable_release_debug)
     endif()
   endforeach()
 endfunction()
-find_package(OpenCV REQUIRED)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
 endif()
 
-project (CMT)
+project(CMT CXX)
+
+find_package(OpenCV REQUIRED)
 
 # CMT
 file(GLOB CMT_SRCS_ALL *.h *.cpp
