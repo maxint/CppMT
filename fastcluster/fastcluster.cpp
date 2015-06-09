@@ -538,8 +538,8 @@ public:
     // Complexity: Θ(size)
     // Reference: Cormen, Leiserson, Rivest, Stein, Introduction to Algorithms,
     // 3rd ed., 2009, Section 6.3 “Building a heap”
-    t_index idx;
-    for (idx=(size>>1); idx>0; ) {
+    //int idx;
+    for (t_index idx=(size>>1); idx>0; ) {
       --idx;
       update_geq_(idx);
     }

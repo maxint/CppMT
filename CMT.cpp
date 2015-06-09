@@ -100,8 +100,8 @@ void CMT::initialize(const Mat im_gray, const Rect rect)
     FILE_LOG(logDEBUG) << "CMT::initialize() return";
 }
 
-void CMT::processFrame(Mat im_gray) {
-
+void CMT::processFrame(Mat im_gray)
+{
     FILE_LOG(logDEBUG) << "CMT::processFrame() call";
 
     //Track keypoints
@@ -119,7 +119,6 @@ void CMT::processFrame(Mat im_gray) {
         {
             classes_tracked.push_back(classes_active[i]);
         }
-
     }
 
     //Detect keypoints, compute descriptors
